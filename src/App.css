@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.Header{
+  text-align: center;
+  color: lightseagreen
+}
+
+.Caption{
+  text-align: left;
+  color: black;
+  font-size: large;
+  margin: 20px;
+}
