@@ -5,7 +5,7 @@ function WithLoadingList(Component) {
         if (!isLoading) return <Component {...props} />
 
         return (
-            <p>Espere, estamos cargando la información</p>
+            <p>Espere, cargando la información</p>
         )
     }
 
