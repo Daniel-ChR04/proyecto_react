@@ -35,7 +35,7 @@ export const Login = () => {
 
   function ifMatch(param){
     if(param.user.length > 0 && param.password.length > 0){
-      if(param.user === 'kitchen' && param.password === '123'){
+      if(param.user === 'kitchen' && param.password === 'kitchen'){
         const {user, password} = param;
         let ac = {user, password};
         //aqui se tiene que comunicar con la api
