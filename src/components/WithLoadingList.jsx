@@ -5,7 +5,7 @@ function WithLoadingList(Component) {
         if (!isLoading) return <Component {...props} />
 
         return (
-            <p>Espere, cargando la información</p>
+            <p style ={{margin: "10px 30px"}}>Espere, cargando la información</p>
         )
     }
 

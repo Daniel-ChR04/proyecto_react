@@ -21,7 +21,7 @@ export default function Orders() {
         <h1 className="Header">Lista de pedidos activos pendientes</h1><br/>
         <LoadingList isLoading={appState.loading} orders={appState.orders}/>
         <button className="btn btn-outline-warning my-2 my-sm-0" style ={{margin: "10px 30px"}}> 
-          Deshacer
+          Deshacer 'aun no funciona'
         </button>
     </div>
   )

@@ -62,3 +62,15 @@
   color: red;
   background: rosybrown;
 }
+
+.in_time{
+  color: green;
+}
+
+.over_time{
+  color: yellow;
+}
+
+.delayed{
+  color: red;
+}

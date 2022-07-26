@@ -10,7 +10,7 @@ export const Login = () => {
   const [passwordError, setPasswordError] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const [loginError, setLoginError] = useState(false);
-
+ 
   function handleChange(name, value){
     if (name === 'user'){
         setUser(value)

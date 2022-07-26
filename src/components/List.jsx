@@ -1,10 +1,11 @@
 import React from "react";
+import { ColorCode } from '../components/ColorCode';
 
 const List = (props) => {
     const {orders} = props;
 
     if (!orders || orders.length === 0) {
-        return <h3>No hay pedidos activos pendientes</h3>
+        return <h3 style ={{margin: "10px 30px"}}>No hay pedidos activos pendientes</h3>
     }else {
               
             return (        
@@ -17,23 +18,26 @@ const List = (props) => {
                                     <div key={order.id}>
                                         <span>
                                             <b>{order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? 'Fecha:' : ''} </b> 
+                                            ? 'Estado: ' : ''} </b> 
+                                            <ColorCode 
+                                            param={order.status} 
+                                            txt = {order.status !== 'delivered' && order.status !== 'cancelled'
+                                            ? order.status : ''}  
+                                            />                                            
+                                        </span>
+                                        <span style ={{margin: "10px"}}>
+                                            <b>{order.status !== 'delivered' && order.status !== 'cancelled'
+                                            ? 'Fecha: ' : ''}</b>
                                             {order.status !== 'delivered' && order.status !== 'cancelled'
                                             ? order.order_date : ''} 
                                         </span>
-                                        <span>
+                                        <span style ={{margin: "10px"}}>
                                             <b>{order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? 'Estado:' : ''}</b> 
-                                            {order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? order.status : ''} 
-                                        </span>
-                                        <span>
-                                            <b>{order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? 'Cliente:' : ''}</b> 
+                                            ? 'Cliente: ' : ''}</b> 
                                             {order.status !== 'delivered' && order.status !== 'cancelled'
                                             ? order.client_id : ''} 
                                         </span>
-                                        <span>
+                                        <span style ={{margin: "10px"}}>
                                             <b>{order.status !== 'delivered' && order.status !== 'cancelled'
                                             ? 'Platillo' : ''}</b> 
                                             {order.status !== 'delivered' && order.status !== 'cancelled'
