@@ -65,12 +65,15 @@
 
 .in_time{
   color: green;
+  text-transform: capitalize;
 }
 
 .over_time{
   color: yellow;
+  text-transform: capitalize;
 }
 
 .delayed{
   color: red;
+  text-transform: capitalize;
 }

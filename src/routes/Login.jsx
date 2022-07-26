@@ -79,21 +79,16 @@ export const Login = () => {
           />
 
           { passwordError &&
-          <label className='Error' style ={{margin: "1px 10px"}}> 
+          <><label className='Error' style={{ margin: "1px 10px" }}>
             Contraseña inválida (Lím mínimo de caracteres: 3)
-          </label>
+          </label><br /></>
           }
 
           { loginError &&
-          <label className='Error'  style ={{margin: "1px 10px"}}>
-            Su usuario o contraseña son incorrectos, o no existen</label>
+          <><label className='Error' style={{ margin: "1px 10px" }}>
+            Su usuario o contraseña son incorrectos, o no existen
+          </label><br /></>
           }
-
-        <p style ={{margin: "10px"}}>Seleccione un rol: </p>
-        <div style ={{margin: "10px"}} class="radio">
-          <label><input type="radio" name="optradio" checked/>Aministrador</label><br/>
-          <label><input type="radio" name="optradio" checked/>Cocina</label>
-        </div>
 
 
         <Link to = {isLogin ? '/orders' : '/login'} onClick={handleSubmit} 

@@ -17,31 +17,31 @@ const List = (props) => {
                                 <div>
                                     <div key={order.id}>
                                         <span>
-                                            <b>{order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? 'Estado: ' : ''} </b> 
+                                            <a>{order.status !== 'delivered' && order.status !== 'cancelled'
+                                            ? 'Estado: ' : <a></a>} </a> 
                                             <ColorCode 
                                             param={order.status} 
                                             txt = {order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? order.status : ''}  
+                                            ? order.status :  <a></a>}  
                                             />                                            
                                         </span>
                                         <span style ={{margin: "10px"}}>
-                                            <b>{order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? 'Fecha: ' : ''}</b>
+                                            <a>{order.status !== 'delivered' && order.status !== 'cancelled'
+                                            ? 'Fecha: ' :  <a></a>}</a>
                                             {order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? order.order_date : ''} 
+                                            ? order.order_date : <a></a>} 
                                         </span>
                                         <span style ={{margin: "10px"}}>
-                                            <b>{order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? 'Cliente: ' : ''}</b> 
+                                            <a>{order.status !== 'delivered' && order.status !== 'cancelled'
+                                            ? 'Cliente: ' :  <a></a>}</a> 
                                             {order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? order.client_id : ''} 
+                                            ? order.client_id :  <a></a>} 
                                         </span>
                                         <span style ={{margin: "10px"}}>
-                                            <b>{order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? 'Platillo' : ''}</b> 
+                                            <a>{order.status !== 'delivered' && order.status !== 'cancelled'
+                                            ? 'Platillo: ' :  <a></a>}</a> 
                                             {order.status !== 'delivered' && order.status !== 'cancelled'
-                                            ? order.plate_id : ''} 
+                                            ? order.plate_id :  <a></a>} 
                                         </span>
                                     </div>
                                 </div>                    
